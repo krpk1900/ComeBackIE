@@ -1,0 +1,25 @@
+.test {color: red !important; }
+.heart {
+  cursor: pointer !important;
+  height: 200px !important;
+  width: 200px !important;
+  /* background-image:url( "heart_animation.png" ) !important; */
+  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png') !important;
+  /* background-image:url( 'https://nelog.jp/wp-content/uploads/2016/03/star_animation.png') !important; */
+  background-position: left !important;
+  background-repeat:no-repeat !important;
+  background-size:2900% !important;
+}
+
+.on {
+  background-position:right !important;
+}
+
+.is_animating {
+  animation: heart-burst .8s steps(28) 1 !important;
+}
+
+@keyframes heart-burst {
+  from {background-position:left;}
+  to { background-position:right;}
+}

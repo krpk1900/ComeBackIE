@@ -1,0 +1,21 @@
+{
+	"name": "よみがえれIE",
+	"manifest_version": 2,
+	"version": "0.0.1",
+	"content_scripts": [
+    {
+      "matches": [
+        "https://www.google.co.jp/*",
+        "https://twitter.com/*"
+      ],
+      "js": ["script.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "https://www.google.co.jp/*",
+    "https://twitter.com/*",
+    "https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png"
+  ]
+}
