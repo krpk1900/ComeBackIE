@@ -7,7 +7,7 @@ window.addEventListener('scroll', function(){
       let heart_element = g_element.parentNode.parentNode.parentNode.parentNode.parentNode
       //console.log(heart_element)
       let test_div = document.createElement('div');
-      test_div.innerHTML = "test1"
+      test_div.classList.add('heart');
       heart_element.replaceWith(test_div);
 
     // 塗りつぶされたハートがあれば
@@ -15,7 +15,7 @@ window.addEventListener('scroll', function(){
       let heart_element = g_element.parentNode.parentNode.parentNode.parentNode.parentNode
       //console.log(heart_element)
       let test_div = document.createElement('div');
-      test_div.innerHTML = "test2"
+      test_div.classList.add('heart');
       heart_element.replaceWith(test_div);
 
     }

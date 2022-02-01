@@ -1,22 +1,21 @@
-.test {color: red !important; }
+.test {color: red; }
 .heart {
-  cursor: pointer !important;
-  height: 200px !important;
-  width: 200px !important;
-  /* background-image:url( "heart_animation.png" ) !important; */
-  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png') !important;
-  /* background-image:url( 'https://nelog.jp/wp-content/uploads/2016/03/star_animation.png') !important; */
-  background-position: left !important;
-  background-repeat:no-repeat !important;
-  background-size:2900% !important;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  /* background-image:url( 'https://nelog.jp/wp-content/uploads/2016/03/star_animation.png'); */
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
 }
 
 .on {
-  background-position:right !important;
+  background-position:right;
 }
 
 .is_animating {
-  animation: heart-burst .8s steps(28) 1 !important;
+  animation: heart-burst .8s steps(28) 1;
 }
 
 @keyframes heart-burst {
