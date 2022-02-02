@@ -1,4 +1,13 @@
-.test {color: red; }
+.test1 {color: red; }
+.flex {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+ }
+.num {
+  color: rgb(83, 100, 113);
+  font-size: 13px;
+}
 .heart {
   cursor: pointer;
   height: 50px;
