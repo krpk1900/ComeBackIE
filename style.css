@@ -2,9 +2,9 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
- }
+}
 
- .num {
+.num {
   color: rgb(83, 100, 113);
   font-size: 13px;
 }
@@ -17,8 +17,8 @@
   cursor: pointer;
   height: 50px;
   width: 50px;
-  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
-  /* background-image:url( 'https://nelog.jp/wp-content/uploads/2016/03/star_animation.png'); */
+  /* background-image:url( 'chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/star_animation.png'); */
+  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/heart_animation.png");
   background-position: left;
   background-repeat:no-repeat;
   background-size:2900%;
@@ -29,7 +29,7 @@
 }
 
 .is_animating {
-  animation: heart-burst .8s steps(28) 1;
+  animation: heart-burst .8s steps(28) 1; /*heartが28, starが55*/
 }
 
 @keyframes heart-burst {
