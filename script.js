@@ -10,20 +10,31 @@ window.addEventListener('scroll', function(){
       let good_element = g_element.parentNode.parentNode.parentNode.parentNode.parentNode
       let num
       try {
-        num = g_element.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.firstElementChild.innerHTML
+        num = parseInt(g_element.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.firstElementChild.innerHTML);
       } catch {
-        num = ''
+        num = 0
       }
       console.log(num)
       let heart_element = document.createElement('div');
+      let group = document.createElement('div');
+      let num_element = document.createElement('div');
+      let toggle_plus = true;
       heart_element.classList.add('heart');
       heart_element.addEventListener('click', e => {
         heart_element.classList.toggle('is_animating');
         heart_element.classList.toggle('on');
+        num_element.classList.toggle('num_colored');
+        if(toggle_plus) {
+          num += 1;
+          num_element.innerHTML = num;
+          toggle_plus = false;
+        } else {
+          num -= 1;
+          num_element.innerHTML = num;
+          toggle_plus = true;
+        }
         e.stopPropagation();
       }, true);
-      let group = document.createElement('div');
-      let num_element = document.createElement('div');
       num_element.innerHTML = num;
       group.appendChild(heart_element);
       group.appendChild(num_element);
