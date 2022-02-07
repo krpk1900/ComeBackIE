@@ -10,15 +10,15 @@
 }
 
 .num_colored {
-  color: rgb(249, 24, 128);
+  color: rgb(29, 155, 240);
 }
 
 .heart {
   cursor: pointer;
-  height: 50px;
-  width: 50px;
-  /* background-image:url( 'chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/star_animation.png'); */
-  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/heart_animation.png");
+  margin-bottom: 5px;
+  height: 40px;
+  width: 40px;
+  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/IEkansei.png");
   background-position: left;
   background-repeat:no-repeat;
   background-size:2900%;
