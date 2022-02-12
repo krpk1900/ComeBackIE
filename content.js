@@ -1,3 +1,10 @@
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  console.log(request.message); // hello
+  //console.log(sender);
+  //sendResponse({}); // 送り返すものがない場合は空のオブジェクトを送る
+});
+
+// ここからスクロール中の処理
 window.addEventListener('scroll', function(){
   //console.log("スクロール中");
   //console.log(chrome.extension.getURL("/test.png"))

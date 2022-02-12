@@ -1,7 +1,7 @@
 {
-	"name": "よみがえれIE",
+	"name": "蘇れIE",
 	"manifest_version": 2,
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"browser_action":{
     "default_icon": {
       "16": "icon.png"
@@ -14,11 +14,12 @@
       "matches": [
         "https://twitter.com/*"
       ],
-      "js": ["script.js"],
+      "js": ["content.js"],
       "css": ["style.css"]
     }
   ],
   "permissions": [
+    "tabs",
     "https://twitter.com/*"
   ],
   "web_accessible_resources": [
