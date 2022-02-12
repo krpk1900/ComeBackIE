@@ -2,10 +2,16 @@
 	"name": "よみがえれIE",
 	"manifest_version": 2,
 	"version": "0.0.1",
-	"content_scripts": [
+	"browser_action":{
+    "default_icon": {
+      "16": "icon.png"
+    },
+    "default_title":"蘇れIE",
+    "default_popup":"popup.html"
+  },
+  "content_scripts": [
     {
       "matches": [
-        "https://www.google.co.jp/*",
         "https://twitter.com/*"
       ],
       "js": ["script.js"],
@@ -13,11 +19,7 @@
     }
   ],
   "permissions": [
-    "activeTab",
-    "https://www.google.co.jp/*",
-    "https://twitter.com/*",
-    "https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png",
-    "https://nelog.jp/wp-content/uploads/2016/03/star_animation.png"
+    "https://twitter.com/*"
   ],
   "web_accessible_resources": [
     "*.png"
