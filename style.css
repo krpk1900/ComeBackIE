@@ -13,7 +13,51 @@
   color: rgb(29, 155, 240);
 }
 
-.heart {
+.IE {
+  cursor: pointer;
+  margin-bottom: 5px;
+  height: 40px;
+  width: 40px;
+  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/IE_animation.png");
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+}
+
+.star {
+  cursor: pointer;
+  margin-bottom: 5px;
+  height: 40px;
+  width: 40px;
+  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/star_animation.png");
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+}
+
+.good {
+  cursor: pointer;
+  margin-bottom: 5px;
+  height: 40px;
+  width: 40px;
+  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/good_animation.png");
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+}
+
+.snow {
+  cursor: pointer;
+  margin-bottom: 5px;
+  height: 40px;
+  width: 40px;
+  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/snow_animation.png");
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+}
+
+.moon {
   cursor: pointer;
   margin-bottom: 5px;
   height: 40px;
@@ -24,15 +68,26 @@
   background-size:2900%;
 }
 
+.heart {
+  cursor: pointer;
+  margin-bottom: 5px;
+  height: 40px;
+  width: 40px;
+  background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/heart_animation.png");
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+}
+
 .on {
   background-position:right;
 }
 
 .is_animating {
-  animation: heart-burst .8s steps(28) 1; /*heartが28, starが55*/
+  animation: icon-burst .8s steps(28) 1; /*iconが28, starが55*/
 }
 
-@keyframes heart-burst {
+@keyframes icon-burst {
   from {background-position:left;}
   to { background-position:right;}
 }

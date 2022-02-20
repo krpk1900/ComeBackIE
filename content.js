@@ -1,12 +1,12 @@
+let icon = "IE";
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  console.log(request.message); // hello
-  //console.log(sender);
-  //sendResponse({}); // 送り返すものがない場合は空のオブジェクトを送る
+  console.log(request.message);
+  icon = request.message;
 });
 
 // ここからスクロール中の処理
 window.addEventListener('scroll', function(){
-  //console.log("スクロール中");
+  console.log(icon);
   //console.log(chrome.extension.getURL("/test.png"))
   let g_elements = document.getElementsByTagName('g');
   for(let g_element of g_elements){
@@ -19,14 +19,14 @@ window.addEventListener('scroll', function(){
       } catch {
         num = 0
       }
-      let heart_element = document.createElement('div');
+      let icon_element = document.createElement('div');
       let group = document.createElement('div');
       let num_element = document.createElement('div');
       let toggle_plus = true;
-      heart_element.classList.add('heart');
-      heart_element.addEventListener('click', e => {
-        heart_element.classList.toggle('is_animating');
-        heart_element.classList.toggle('on');
+      icon_element.classList.add(icon);
+      icon_element.addEventListener('click', e => {
+        icon_element.classList.toggle('is_animating');
+        icon_element.classList.toggle('on');
         num_element.classList.toggle('num_colored');
         if(toggle_plus) {
           num += 1;
@@ -40,7 +40,7 @@ window.addEventListener('scroll', function(){
         e.stopPropagation();
       }, true);
       num_element.innerHTML = num;
-      group.appendChild(heart_element);
+      group.appendChild(icon_element);
       group.appendChild(num_element);
       group.classList.add('flex');
       num_element.classList.add('num');
@@ -54,15 +54,15 @@ window.addEventListener('scroll', function(){
       } catch {
         num = 0
       }
-      let heart_element = document.createElement('div');
+      let icon_element = document.createElement('div');
       let group = document.createElement('div');
       let num_element = document.createElement('div');
       let toggle_plus = false;
-      heart_element.classList.add('heart', 'on', 'is_animating');
+      icon_element.classList.add(icon, 'on', 'is_animating');
       num_element.classList.add('num_colored');
-      heart_element.addEventListener('click', e => {
-        heart_element.classList.toggle('is_animating');
-        heart_element.classList.toggle('on');
+      icon_element.addEventListener('click', e => {
+        icon_element.classList.toggle('is_animating');
+        icon_element.classList.toggle('on');
         num_element.classList.toggle('num_colored');
         if(toggle_plus) {
           num += 1;
@@ -76,7 +76,7 @@ window.addEventListener('scroll', function(){
         e.stopPropagation();
       }, true);
       num_element.innerHTML = num;
-      group.appendChild(heart_element);
+      group.appendChild(icon_element);
       group.appendChild(num_element);
       group.classList.add('flex');
       num_element.classList.add('num');
