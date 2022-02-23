@@ -9,8 +9,28 @@
   font-size: 13px;
 }
 
-.num_colored {
+.num_IE {
   color: rgb(29, 155, 240);
+}
+
+.num_star {
+  color: #ffd700;
+}
+
+.num_good {
+  color: #5654F0;
+}
+
+.num_snow {
+  color: #87cefa;
+}
+
+.num_moon {
+  color: #ffff00;
+}
+
+.num_heart {
+  color :rgb(249, 24, 128);
 }
 
 .IE {
@@ -70,7 +90,6 @@
 
 .heart {
   cursor: pointer;
-  margin-bottom: 5px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/heart_animation.png");

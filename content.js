@@ -1,12 +1,31 @@
 let icon = "IE";
+let num_color = "num_IE"
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   console.log(request.message);
-  icon = request.message;
+  icon = request.message[0];
+  num_color = request.message[1];
+  let changed_elements = document.getElementsByClassName('changed');
+  for(let changed_element of changed_elements){
+    if(changed_element.firstElementChild.classList.contains('on')){
+      // アイコンがアクティブになっているとき
+      console.log("アクティブ発見");
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.add(icon);
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
+      changed_element.children[1].classList.add(num_color);
+    } else {
+      // アイコンが非アクティブになっているとき
+      console.log("非アクティブ");
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.add(icon);
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
+    }
+  };
 });
 
-// ここからスクロール中の処理
+// スクロールごとに、もともとのハートボタンを変えていく処理
 window.addEventListener('scroll', function(){
-  console.log(icon);
+  console.log(num_color);
   //console.log(chrome.extension.getURL("/test.png"))
   let g_elements = document.getElementsByTagName('g');
   for(let g_element of g_elements){
@@ -27,7 +46,7 @@ window.addEventListener('scroll', function(){
       icon_element.addEventListener('click', e => {
         icon_element.classList.toggle('is_animating');
         icon_element.classList.toggle('on');
-        num_element.classList.toggle('num_colored');
+        num_element.classList.toggle(num_color);
         if(toggle_plus) {
           num += 1;
           num_element.innerHTML = num;
@@ -42,7 +61,7 @@ window.addEventListener('scroll', function(){
       num_element.innerHTML = num;
       group.appendChild(icon_element);
       group.appendChild(num_element);
-      group.classList.add('flex');
+      group.classList.add('flex', 'changed');
       num_element.classList.add('num');
       good_element.replaceWith(group);
     }else if(g_element.innerHTML == '<path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"></path>'){
@@ -59,11 +78,11 @@ window.addEventListener('scroll', function(){
       let num_element = document.createElement('div');
       let toggle_plus = false;
       icon_element.classList.add(icon, 'on', 'is_animating');
-      num_element.classList.add('num_colored');
+      num_element.classList.add(num_color);
       icon_element.addEventListener('click', e => {
         icon_element.classList.toggle('is_animating');
         icon_element.classList.toggle('on');
-        num_element.classList.toggle('num_colored');
+        num_element.classList.toggle(num_color);
         if(toggle_plus) {
           num += 1;
           num_element.innerHTML = num;
@@ -78,9 +97,28 @@ window.addEventListener('scroll', function(){
       num_element.innerHTML = num;
       group.appendChild(icon_element);
       group.appendChild(num_element);
-      group.classList.add('flex');
+      group.classList.add('flex', 'changed');
       num_element.classList.add('num');
       good_element.replaceWith(group);
+    }
+  };
+});
+
+// スクロールごとに、この拡張機能で変更したアイコンを変えていく処理
+window.addEventListener('scroll', function(){
+  let changed_elements = document.getElementsByClassName('changed');
+  for(let changed_element of changed_elements){
+    if(changed_element.firstElementChild.classList.contains('on')){
+      // アイコンがアクティブになっているとき
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.add(icon);
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
+      changed_element.children[1].classList.add(num_color);
+    } else {
+      // アイコンが非アクティブになっているとき
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.add(icon);
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
     }
   };
 });
