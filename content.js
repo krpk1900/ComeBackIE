@@ -8,17 +8,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   for(let changed_element of changed_elements){
     if(changed_element.firstElementChild.classList.contains('on')){
       // アイコンがアクティブになっているとき
-      console.log("アクティブ発見");
-      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon', 'heart');
       changed_element.firstElementChild.classList.add(icon);
-      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon', 'num_heart');
       changed_element.children[1].classList.add(num_color);
     } else {
       // アイコンが非アクティブになっているとき
-      console.log("非アクティブ");
-      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon', 'heart');
       changed_element.firstElementChild.classList.add(icon);
-      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon', 'num_heart');
     }
   };
 });
@@ -110,15 +108,15 @@ window.addEventListener('scroll', function(){
   for(let changed_element of changed_elements){
     if(changed_element.firstElementChild.classList.contains('on')){
       // アイコンがアクティブになっているとき
-      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon', 'heart');
       changed_element.firstElementChild.classList.add(icon);
-      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon', 'num_heart');
       changed_element.children[1].classList.add(num_color);
     } else {
       // アイコンが非アクティブになっているとき
-      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon');
+      changed_element.firstElementChild.classList.remove('IE', 'star', 'good', 'snow', 'moon', 'heart');
       changed_element.firstElementChild.classList.add(icon);
-      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon');
+      changed_element.children[1].classList.remove('num_IE', 'num_star', 'num_good', 'num_snow', 'num_moon', 'num_heart');
     }
   };
 });

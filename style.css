@@ -3,39 +3,31 @@
   justify-content: center !important;
   align-items: center !important;
 }
-
 .num {
   color: rgb(83, 100, 113);
   font-size: 13px;
 }
-
 .num_IE {
   color: rgb(29, 155, 240);
 }
-
 .num_star {
   color: #ffd700;
 }
-
 .num_good {
   color: #5654F0;
 }
-
 .num_snow {
   color: #87cefa;
 }
-
 .num_moon {
   color: #ffff00;
 }
-
 .num_heart {
   color :rgb(249, 24, 128);
 }
-
 .IE {
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/IE_animation.png");
@@ -43,10 +35,9 @@
   background-repeat:no-repeat;
   background-size:2900%;
 }
-
 .star {
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/star_animation.png");
@@ -54,10 +45,9 @@
   background-repeat:no-repeat;
   background-size:2900%;
 }
-
 .good {
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/good_animation.png");
@@ -65,10 +55,9 @@
   background-repeat:no-repeat;
   background-size:2900%;
 }
-
 .snow {
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/snow_animation.png");
@@ -76,10 +65,9 @@
   background-repeat:no-repeat;
   background-size:2900%;
 }
-
 .moon {
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://ilophopifdjghnkmdkhpdmjmfmoddjii/moon_animation.png");
@@ -87,7 +75,6 @@
   background-repeat:no-repeat;
   background-size:2900%;
 }
-
 .heart {
   cursor: pointer;
   height: 40px;
@@ -97,15 +84,12 @@
   background-repeat:no-repeat;
   background-size:2900%;
 }
-
 .on {
   background-position:right;
 }
-
 .is_animating {
   animation: icon-burst .8s steps(28) 1; /*iconが28, starが55*/
 }
-
 @keyframes icon-burst {
   from {background-position:left;}
   to { background-position:right;}

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
-        background-color: white;
+        background-color: #0A0017;
       }
       .IE {
         cursor: pointer;
@@ -65,16 +65,26 @@
         background-repeat:no-repeat;
         background-size:2900%;
       }
+      .on {
+        background-position:right;
+      }
+      .is_animating {
+        animation: icon-burst .8s steps(28) 1; /*iconが28, starが55*/
+      }
+      @keyframes icon-burst {
+        from {background-position:left;}
+        to { background-position:right;}
+      }
 
     </style>
   </head>
   <body style="width: 200px; display: flex;">
-    <div class="IE"></div>
-    <div class="star"></div>
-    <div class="good"></div>
-    <div class="snow"></div>
-    <div class="moon"></div>
-    <div class="heart"></div>
+    <div class="IE icon on is_animating"></div>
+    <div class="star icon"></div>
+    <div class="good icon"></div>
+    <div class="snow icon"></div>
+    <div class="moon icon"></div>
+    <div class="heart icon"></div>
   </body>
   <script src="popup.js" type="text/javascript"></script>
 </html>
