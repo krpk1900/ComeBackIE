@@ -1,33 +1,9 @@
-.flex {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-.num {
-  color: rgb(83, 100, 113);
-  font-size: 13px;
-}
-.num_IE {
-  color: rgb(29, 155, 240);
-}
-.num_star {
-  color: #ffd700;
-}
-.num_good {
-  color: #5654F0;
-}
-.num_snow {
-  color: #87cefa;
-}
-.num_moon {
-  color: #ffff00;
-}
-.num_heart {
-  color :rgb(249, 24, 128);
+body {
+  background-color: #0A0017;
 }
 .IE {
   cursor: pointer;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://__MSG_@@extension_id__/IE_animation.png");
@@ -37,7 +13,7 @@
 }
 .star {
   cursor: pointer;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://__MSG_@@extension_id__/star_animation.png");
@@ -47,7 +23,7 @@
 }
 .good {
   cursor: pointer;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://__MSG_@@extension_id__/good_animation.png");
@@ -57,7 +33,7 @@
 }
 .snow {
   cursor: pointer;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://__MSG_@@extension_id__/snow_animation.png");
@@ -67,7 +43,7 @@
 }
 .moon {
   cursor: pointer;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   height: 40px;
   width: 40px;
   background-image:url( "chrome-extension://__MSG_@@extension_id__/moon_animation.png");
