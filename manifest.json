@@ -1,12 +1,12 @@
 {
-	"name": "蘇れIE",
+	"name": "甦れIE",
 	"manifest_version": 3,
 	"version": "1.0.0",
 	"action":{
     "default_icon": {
       "16": "icon.png"
     },
-    "default_title":"蘇れIE",
+    "default_title":"甦れIE",
     "default_popup":"popup.html"
   },
   "content_scripts": [
