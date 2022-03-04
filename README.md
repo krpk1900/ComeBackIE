@@ -5,7 +5,7 @@
 # サービス概要
 
 <a href="">
-  <img width="50%" src="https://user-images.githubusercontent.com/72296262/156385768-09ada52c-d355-4377-b06f-48eb16b3cb24.gif" />
+  <img width="50%" src="https://user-images.githubusercontent.com/72296262/156818524-ff2b1fef-d41e-4334-91f3-ebc5f03364f8.gif" />
 </a>
 
 
