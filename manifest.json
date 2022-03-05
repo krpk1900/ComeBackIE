@@ -2,10 +2,13 @@
 	"name": "甦れIE",
 	"manifest_version": 3,
 	"version": "1.0.0",
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
 	"action":{
-    "default_icon": {
-      "16": "icon.png"
-    },
+    "default_icon": "icon_19.png",
     "default_title":"甦れIE",
     "default_popup":"popup.html"
   },
