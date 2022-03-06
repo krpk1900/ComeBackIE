@@ -1,10 +1,10 @@
 # 甦れIE
 
-
+https://chrome.google.com/webstore/detail/%E7%94%A6%E3%82%8Cie/lhmdcacnhmmbfjagjcjpgedpaoamkocm
 
 # サービス概要
 
-<a href="https://chrome.google.com/webstore/detail/%E7%94%A6%E3%82%8Cie/lhmdcacnhmmbfjagjcjpgedpaoamkocm?hl=ja&authuser=0">
+<a href="https://chrome.google.com/webstore/detail/%E7%94%A6%E3%82%8Cie/lhmdcacnhmmbfjagjcjpgedpaoamkocm">
   <img width="50%" src="https://user-images.githubusercontent.com/72296262/156818524-ff2b1fef-d41e-4334-91f3-ebc5f03364f8.gif" />
 </a>
 
@@ -20,5 +20,5 @@ IEのアイコンだけでなく、星や親指などのアイコンにも変更
 # 原因
 
 Twitterのいいね機能をそのまま残しつつ表示だけを変更するためにハートのアニメーションに該当するclassを上書きしようと考えましたが、class名の一部がハッシュ化されており該当classを特定できませんでした。  
-そのため今回は、IEアイコンのボタンと隣の数字を新たに作りいいねボタンのDOMと入れ替えることでアニメーションの変更を行っています。  
-DOMを入れ替えてしまっているためいいね機能が動作しなくなり、現状相手にいいねが届かなくなってしまっています。
+そのため今回は、IEアイコンのボタンと隣の数字を新たに作りいいねボタンのノードと入れ替えることでアニメーションの変更を行っています。  
+ノードを入れ替えてしまっているためいいね機能が動作しなくなり、現状相手にいいねが届かなくなってしまっています。
